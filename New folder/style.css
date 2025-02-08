@@ -565,6 +565,26 @@ address .footer-text {
     padding-block-start: 0;
     display: flex;
   }
+  .navbar-list a {
+    transition: var(--transition-1);
+    position: relative;
+  }
+  .navbar-list a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background-color: var(--text-orange-crayola);
+    left: 0;
+    bottom: -3px;
+    transition: var(--transition-1);
+  }
+  .navbar-list a:is(:hover, :focus-visible)::after {
+    width: 100%;
+  }
+  .navbar-list a:is(:hover, :focus-visible) {
+    color: var(--text-orange-crayola);
+  }
   .cart-btn {
     border-inline-start: 2px solid var(--border-eerie-black);
     padding-inline-start: 50px;
